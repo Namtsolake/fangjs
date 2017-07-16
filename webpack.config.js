@@ -20,14 +20,14 @@ module.exports = {
         historyApiFallback: true,
 
             //配置服务器支持反向代理功能
-        // proxy:{
-        //    '/mobile/api/v1/*': {
-        //           target: 'https://fangjs.sina.com.cn',
-        //           host: 'fangjs.sina.com.cn',
-        //           changeOrigin:true
-        //       },
+         proxy:{
+            '/mobile/api/v1/*': {
+                   target: 'https://fangjs.sina.com.cn',
+                   host: 'fangjs.sina.com.cn',
+                   changeOrigin:true
+               },
 
-        // }
+         }
 
         /*
           在前端 发起 /v4/api/billboard/home请求
