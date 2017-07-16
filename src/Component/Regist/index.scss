@@ -1,0 +1,243 @@
+#regist{
+	height:1000px;
+	html,body{
+		width: 100%;
+		height: 100%;
+		background: #F3F3F3;
+	}
+	.all{
+		width: 100%;
+		position: relative;
+		// header{
+		// 	background: #DE3031;
+		// 	width: 100%;
+		// 	height: .45rem;
+		// 	position: fixed;
+		// 	top: 0;
+		// 	z-index: 33;
+		// 	h1{
+		// 		height: 100%;
+		// 		width: 100%;
+		// 		font-size: .18rem;
+		// 		text-align: center;
+		// 		color: #fff;
+		// 		line-height: .45rem;
+		// 		position: relative;
+		// 		.fanhui{
+		// 			display: inline-block;
+		// 			width: .51rem;
+		// 			height: 100%;
+		// 			position: absolute;
+		// 			left: 0;
+		// 			color: #fff;
+		// 			font-size: .35rem;
+		// 			line-height: .45rem;
+		// 		}
+		// 	}
+		// }
+		.zho{
+			position: absolute;
+			// top: .42rem;
+			.datu{
+				width: 100%;
+				height:1.44rem;
+				background: url(https://static.fangjs.com/fjsfp/static/m/v1.1.4/img/cas/login.bg.png) center no-repeat; 
+			}
+			form{
+				background: #fff;
+				input{
+					border: none;
+					outline: medium;
+					text-shadow: 0px 0px 0px blue;
+					-webkit-text-fill-color: transparent;
+				}
+				input:focus{
+					text-shadow:0px 0px 0px green;
+				}
+				::-webkit-input-placeholder {
+				    text-shadow: 0px 0px 0px  #999!important;
+				}
+				:-moz-placeholder { 
+				   text-shadow: 0px 0px 0px  #999!important;
+				}
+				::-moz-placeholder { 
+				    text-shadow: 0px 0px 0px #999!important;
+				}
+				:-ms-input-placeholder { 
+				    text-shadow: 0px 0px 0px  #999!important;
+				}
+				.yi{
+					float: right;
+					width: 3.63rem;
+					height: .49rem;
+					border-bottom: 1px solid #909090;
+					background: url(https://static.fangjs.com/fjsfp/static/m/v1.1.4/img/cas/icon.phone.png) 3.3rem center no-repeat;
+					font-size: .16rem;
+					line-height: .49rem;
+					label{
+						text-indent: .21rem;
+					}
+					.shouji{
+						width: 2rem;
+						height: .2rem;
+						color: #000;
+						font-size: .14rem;
+						text-indent: .1rem;
+					}
+				}
+				label{
+					float: left;
+					color: #000000;
+				}
+				.er label{
+					text-indent: .05rem;
+				}
+				.san label{
+					text-indent: .37rem;
+				}
+				.si label{
+					text-indent: .21rem;
+				}
+				.wu label{
+					text-indent: .21rem;
+				}
+				.liu label{
+					text-indent: .37rem;
+				}
+				.si{
+					float: right;
+					width: 3.63rem;
+					height: .49rem;
+					border-bottom: 1px solid #909090;
+					font-size: .16rem;
+					line-height: .49rem;
+					.denglu{
+						width: 2rem;
+						height: .2rem;
+						color: #000;
+						font-size: .14rem;
+						text-indent: .1rem;
+					}
+				}
+				.er{
+					float: right;
+					width: 3.63rem;
+					height: .49rem;
+					border-bottom: 1px solid #909090;
+					font-size: .16rem;
+					line-height: .49rem;
+					.tuxing{
+						width: 2rem;
+						height: .2rem;
+						color: #000;
+						font-size: .14rem;
+						text-indent: .1rem;
+					}
+				}
+				.san{
+					float: right;
+					width: 3.63rem;
+					height: .49rem;
+					border-bottom: 1px solid #909090;
+					font-size: .16rem;
+					line-height: .49rem;
+					.yanzheng{
+						width: 2rem;
+						height: .2rem;
+						color: #000;
+						font-size: .14rem;
+						text-indent: .1rem;
+					}
+				}
+				.wu{
+					float: right;
+					width: 3.63rem;
+					height: .49rem;
+					border-bottom: 1px solid #909090;
+					font-size: .16rem;
+					line-height: .49rem;
+					.queren{
+						width: 2rem;
+						height: .2rem;
+						color: #000;
+						font-size: .14rem;
+						text-indent: .1rem;
+					}
+				}
+				.liu{
+					float: right;
+					width: 3.63rem;
+					height: .49rem;
+					font-size: .16rem;
+					line-height: .49rem;
+					.yaoqing{
+						width: 2rem;
+						height: .2rem;
+						color: #000;
+						font-size: .14rem;
+						text-indent: .1rem;
+					}
+				}
+				.anniu{
+					width: 100%;
+					height: .65rem;
+					text-align: center;
+					line-height: 1rem;
+					background: #F3F3F3;
+					overflow: hidden;
+					button{
+						width: 3.51rem;
+						height: .45rem;
+						border-radius: .1rem;
+						background: #FF5C5D;
+						text-align: center;
+						line-height: .4rem;
+						font-size: .2rem;
+						margin:0 auto;
+						color: #fff;
+						border: 0;
+					}
+				}
+				.yaoqiu{
+					display: inline-block;
+					width: 100%;
+					height: .36rem;
+					margin: 0 auto;
+					font-size: .12rem;
+					text-indent: .15rem;
+					color: #999;
+					line-height: .36rem;
+					background: #F3F3F3;
+				}
+				.zhijie{
+					width: 100%;
+					height: .42rem;
+					background: #f3f3f3;
+					font-size: .12rem;
+					text-indent: .15rem;
+					color: #272822;
+					line-height: .42rem;
+					display: inline-block;
+					a{
+						color: #66D9D0;
+					}
+				}
+			}
+			.xieyi{
+				overflow: hidden;
+				padding-top: .05rem;
+				font-size: .12rem;
+				width: 3.51rem;
+				height: 1.08rem;
+				margin: 0 auto;
+				line-height: .16rem;
+				a{
+					color: #777;
+				}
+				.ab a,.xieyi .ac a,.xieyi .ad a{
+					color: #27B1ff;
+				}
+			}
+		}
+	}
+}

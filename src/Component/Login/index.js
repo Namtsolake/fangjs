@@ -1,5 +1,8 @@
 import React,{Component} from "react";
-import "./index.scss"
+import "./index.scss";
+import {
+	NavLink
+}from "react-router-dom";
 
 class Login extends Component{
 	constructor(props){
@@ -9,15 +12,8 @@ class Login extends Component{
 	render(){
 		return(
 			<div id="login">
-			<div className="all">
-				<header>
-				<ul>
-				<li className="fanhui"><i></i></li>
-					<li>登录</li>
-					<li className="you zhuce">立即注册</li>
-				</ul>
-					
-				</header>
+			
+		
 				<div className="datu"></div>
 				<form>	
 					<div className="yi">
@@ -35,12 +31,12 @@ class Login extends Component{
 					</div>
 				</form>	
 				<div className="wangji">
-					<span><a href="javascript:;">忘记密码？</a></span>
+					<span><NavLink to="/regist" activeClassName="suiyi">去注册</NavLink></span>
 				</div>
 				<div className="wenzi">
 					*买房宝用户请用绑定的手机号作为用户名登录，登录密码不变(点击“忘记密码”可进行重置)。
 				</div>
-			</div>	
+			
 			</div>
 			)
 	}
