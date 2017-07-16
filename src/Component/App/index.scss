@@ -1,0 +1,158 @@
+#app{
+	
+	body, ul, li, ol, dl, dt, dd, h1, h2, h3, h4, h5, h6, a, img, input, figure, figcaption, p {
+	padding: 0;
+	margin: 0;
+	}
+	body,html{
+		height:100%;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	ul, ol {
+		list-style: none;
+	}
+	body {
+		font: 12px/1.5 "微软雅黑";
+		background: #efefef;
+	}
+	a {
+		text-decoration: none;
+		// color: #FFF;
+	}
+	a:hover {
+		color: #3e3e3e;
+		text-decoration: none;
+	}
+	img {
+		border: 0;
+		display: block;
+	}
+	input {
+		outline: none;
+	}
+	body, html {
+		height: 100%;
+	}
+	header, nav, main, section, article, footer, figure, figcaption {
+		display: block;
+	}
+	li{
+		list-style:none;
+	}
+	header {
+	width: 100%;
+    // height: 2.8125rem;
+    line-height: 2.8125rem;
+    background: #de3031;
+    position:fixed;
+    // position: fixed;
+    // left: 0;
+    // top: 0;
+    // width: 100%;
+    z-index: 1001;
+    p{
+    height: 85px;
+    line-height:85px;
+    color: #fff;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    // overflow: hidden;
+    font-weight: 700;
+    /* line-height: 2.8125rem; */
+    text-align: center;
+    font-size: 35px;
+    // -webkit-box-flex: 1;
+    // -ms-flex: 1;
+    }
+}    
+
+section{
+		    padding: 85px 0 0;
+		    width: 100%;
+		    flex: 1;
+		    overflow: auto;
+
+	}
+	footer{
+		    width: 100%;
+    		height: 0.625rem;
+    		display: block;
+    		background:#fff;
+    		position:fixed;
+    		bottom:0;
+
+    		ul{
+    			    width: 100%;
+				    height: 99px;
+				    display: flex;
+				    flex-wrap: wrap;
+				    justify-content: space-around;
+			    li{
+			    	font-size:17px;
+			    	width: 25%;
+				    height: 99px;
+				    display: flex;
+				    justify-content: center;
+				    align-items: center;
+				    flex-direction: column;
+				    i{
+				    display: block;
+				    width: 100%;
+				    height: 50%;
+				    font-size: 50px;
+				        text-align: center;
+				    }
+				    .suiyi{ 
+				    	color:#de3031;
+				    	a{
+				    		text-decoration:none;
+				    		text-align: center;
+				    		padding-top: 12px;
+    						padding-left: 12px;
+    						font-size: 25px;
+	    				&:visited{
+	    					color:#fff;
+	    				}
+	    				&:link{
+	    					color:#fff;
+	    				}
+				    	
+				    	}
+
+				    }
+			    }
+    		}
+
+	}
+	
+	.show{
+		// display:block;
+		animation:show 1s both;
+	}
+	@keyframes show{
+		from{
+			transform:translateX(-100%);
+		}
+		to{
+			transform:translateX(0px);
+		}
+	}
+	.hide{
+		// display:none;
+		animation:hide 1s both;
+	}
+	@keyframes hide{
+		from{
+			transform:translateX(0);
+		}
+		to{
+			transform:translateX(-100%);
+		}
+	}
+}
+// .suiyi{
+// 	   color:#de3031;
+// 	   // display:inline-block;
+// 	  }
