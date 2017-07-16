@@ -2,7 +2,7 @@ import React from "react";
 import App from "./Component/App/index";
 import Home from "./Component/Home/index";
 import Investmentprojects from "./Component/Investmentprojects/index";
-import Myaccount from "./Component/Myaccount/index";
+// import Myaccount from "./Component/Myaccount/index";
 import More from "./Component/More/index";
 import Regist from "./Component/Regist/index";
 import Login from "./Component/Login/index";
@@ -31,24 +31,18 @@ const route =(
 			<Route path="/investmentprojects" render={()=>
 			<Investmentprojects>
 			<Switch>
-				<Route path="/investmentprojects/investmentproject" component={Investmentproject}/>投资项目
-				<Route path="/investmentprojects/profit" component={Profit}/>收益
-				<Route path="/investmentprojects/term" component={Term}/>期限
-				<Route path="/investmentprojects/speedofprogress" component={Speedofprogress}/>进度
+				<Route path="/investmentprojects/investmentproject" component={Investmentproject}/>
+				<Route path="/investmentprojects/profit" component={Profit}/>
+				<Route path="/investmentprojects/term" component={Term}/>
+				<Route path="/investmentprojects/speedofprogress" component={Speedofprogress}/>
 				<Redirect from="/" to="/investmentprojects/investmentproject"/>{/*默认跳转投资项目*/}
 			</Switch>
 			</Investmentprojects>
-			}/>4
-			
-			<Route path="/myaccount" render={()=>
-				<Myaccount>
-				<Switch>
-				<Route path="/myaccount/regist" component={Regist}/>
-				<Route path="/myaccount/login" component={Login}/>				
-				</Switch>
-				</Myaccount>
-			}/>1
-			<Route path="/myaccount/myzhanghu" component={Myder}/>
+			}/>
+			<Route path="/login" component={Login}/>	
+
+			<Route path="/regist" component={Regist}/>
+			<Route path="/myder" component={Myder}/>
 			<Route path="/detail/:kerwinID" component={Detail}/>
 			<Route path="/More" component={More}/>
 			<Redirect from="/" to="/home"/>{/*默认跳转投资项目*/}

@@ -41,7 +41,7 @@ class App extends Component{
 			<NavLink to="/investmentprojects" activeClassName="suiyi">
 			<i className="iconfont icon-trade"></i>投资项目</NavLink></li>
 			<li>
-			<NavLink to="/myaccount" activeClassName="suiyi">
+			<NavLink to="/login" activeClassName="suiyi">
 			<i className="iconfont icon-account"></i>我的账户</NavLink></li>
 			<li>
 			<NavLink to="/more" activeClassName="suiyi">
