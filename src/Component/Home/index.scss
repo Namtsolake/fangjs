@@ -1,19 +1,166 @@
 #home{
-	.carousel{
-	width:100%;
+	overflow:-Scroll;overflow-y:hidden;
+	html,body{
+		height: 100%;
+		width: 100%;
+	}
 	img{
-		width:100%;
-	}	
+		display: inline-block;
 	}
-	.nowplaying{
-		img{
-			width:100%;
+	a{
+		display: inline-block;
+		text-decoration:none;
+	}
+	ul,li{
+		list-style: none;
+	}
+	.all{
+		width: 100%;
+		height: 100%;
+		background:#f3f3f3;
+		header{
+			background: #DE3031;
+			width: 100%;
+			height: .45rem;
+			h1{
+				height: 100%;
+				width: 100%;
+				font-size: .16rem;
+				text-align: center;
+				color: #fff;
+				line-height: .45rem;
+				position:relative;
+				span{
+					width: .3rem;
+					height: 100%;
+					display: inline-block;
+					float: right;
+					font-size: 16px;
+					position: absolute;
+					right: .1rem;
+					.touxiang{
+						display: inline-block;
+						width: .3rem;
+						height: 100%;
+						color: #fff;
+						.iconfont{
+							font-family:"iconfont";
+							font-size:.26rem;
+							font-style:normal;
+						}
+					}
+				}
+			}
+		}
+		.lunbo{
+			width: 100%;
+			height: 1.08rem;
+			background: blue;
+		}
+		.gonggao{
+			width: 100%;
+			height: .34rem;
+			background: url(../../assets/img/laba.png) .1rem center no-repeat #EBEAEA;
+			background-size: .2rem;
+			font-size: .15rem;
+			line-height: .34rem;
+			p{
+				text-indent: .4rem;
+				color: #FD8053;
+				span{
+					color: #999999;
+				}
+			}
+		}
+		.xiangqing{
+			background: #F3F3F3;
+			width: 100%;
+			height: .2rem;
+			position: relative;
+			a{
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				font-size: .15rem;
+				position: absolute;
+				background:#f3f3f3;
+			}
+		}
+		.tiao{
+			overflow:-Scroll;overflow-y:hidden;
+			display: inline-block;
+			width: 100%;
+			height: 2.5rem;
+			.dong{
+				overflow:-Scroll;overflow-y:hidden;
+				width: 100%;
+				height: 2.5rem;
+				background-image: url(https://static.fangjs.com/fjsfp/static/m/v1.1.4/img/index/index.circle.line.png),url(https://static.fangjs.com/fjsfp/static/m/v1.1.4/img/index/index.circle.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				text-align: center;
+				position: relative;
+				.up{
+					font-size: .17rem;
+					font-weight: 500;
+					color: #FC8385;
+					display: block;
+					width: 100%;
+					height: 1rem;
+					line-height: 2rem;
+					position: absolute;
+					top: 0;
+				}
+				.down{
+					font-size: .4rem;
+					color: #FC5E61;
+					font-weight: bolder;
+					display: block;
+					height: 1rem;
+					width: 100%;
+					line-height: 1rem;
+					position: absolute;
+					top: 1rem;
+				}
+			}
+		}
+		ul{
+			margin-top: .1rem;
+			width: 100%;
+			height: .32rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			font-size: .12rem;
+			li{
+				line-height: .32rem;
+				color: #888888;
+				text-indent: .25rem;
+			}
+			li:nth-of-type(1){
+				background:url(https://static.fangjs.com/fjsfp/static/m/v1.1.4/img/index/index-sprite.png) 0 .05rem no-repeat;
+			}
+			li:nth-of-type(2){
+				background:url(https://static.fangjs.com/fjsfp/static/m/v1.1.4/img/index/index-sprite.png) left center no-repeat;
+			}
+			li:nth-of-type(3){
+				background:url(https://static.fangjs.com/fjsfp/static/m/v1.1.4/img/index/index-sprite.png) 0 -.5rem no-repeat;
+			}
+		}
+		.dianji{
+			border-radius: .1rem;
+			background:#CCCCCC;
+			font-size: .2rem;
+			width: 3.51rem;
+			margin: 0 auto;
+			height: .45rem;
+			line-height: .45rem;
+			text-align: center;
+			a{
+				color: #fff;
+			}
 		}
 	}
-	.comingsoon{
-		img{
-			width:100%;
-		}
-	}
+	
 
 }
