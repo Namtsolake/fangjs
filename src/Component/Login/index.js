@@ -9,6 +9,15 @@ class Login extends Component{
 		super(props)
 	}
 
+	// componentDidMount(){
+	// 		axios.get("../../data.json").then(res=>{
+	// 			console.log(res.data.regist);
+	// 			// this.setState({
+	// 			// 	looplist:res.data.regist
+	// 			// })
+	// 		})
+
+	// 	}
 	render(){
 		return(
 			<div id="login">

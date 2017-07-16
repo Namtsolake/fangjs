@@ -3,6 +3,7 @@ import "./index.scss";
 import {
 	NavLink
 }from "react-router-dom";
+
 class Regist extends Component{
 	constructor(prop){
 		super(prop)

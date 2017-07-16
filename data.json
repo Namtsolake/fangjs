@@ -1,0 +1,128 @@
+{
+	"nowplaying":[
+		{
+			"id":"111",
+			"name":"悟空传",
+			"gut":"剧情,动作,奇幻",
+			"actor":"主演:彭于晏,倪妮,余文乐",
+			"imgUrl":"http://p0.meituan.net/movie/3534d263e6bc6f85412a147c4aaf4e46667953.jpg.webp@128w_180h",
+			"totaytime":"今天176家影院放映262场"
+		},
+
+		{
+			"id":"222",
+			"name":"神偷奶爸",
+			"gut":"剧情,动作,奇幻",
+			"actor":"主演:彭于晏,倪妮,余文乐",
+			"imgUrl":"http://p0.meituan.net/movie/e4aa7abb6ef5fbe695174063ac6cc0921246361.jpg@128w_180h",
+			"totaytime":"今天176家影院放映263场"
+		},
+
+		{
+			"id":"333",
+			"name":"喵星人",
+			"gut":"剧情,动作,奇幻",
+			"actor":"主演:彭于晏,倪妮,余文乐",
+			"imgUrl":"http://p1.meituan.net/movie/0dc3be00bb030c6c871496ec74a168d52823468.jpg.webp@128w_180h",
+			"totaytime":"今天176家影院放映632场"
+		},
+
+		{
+			"id":"444",
+			"name":"大护法",
+			"gut":"剧情,动作,奇幻",
+			"actor":"主演:彭于晏,倪妮,余文乐",
+			"imgUrl":"http://p0.meituan.net/movie/14d327102710b25c4ad4acf33064b065104228.jpg@128w_180h",
+			"totaytime":"今天176家影院放映2632场"
+		},
+
+		{
+			"id":"555",
+			"name":"青木男高",
+			"gut":"剧情,动作,奇幻",
+			"actor":"主演:彭于晏,倪妮,余文乐",
+			"imgUrl":"http://p0.meituan.net/movie/f633e97639c3697725a2bd2d3b491bff508139.jpg@128w_180h",
+			"totaytime":"今天176家影院放映2632场"
+		},
+
+		{
+			"id":"666",
+			"name":"京城81号",
+			"gut":"剧情,动作,奇幻",
+			"actor":"主演:彭于晏,倪妮,余文乐",
+			"imgUrl":"http://p0.meituan.net/movie/b54ff6d86280f53abde1c46b03f6dea1977483.jpg@128w_180h",
+			"totaytime":"今天176家影院放映2632场"
+		},
+
+		{
+			"id":"777",
+			"name":"深夜食堂",
+			"gut":"剧情,动作,奇幻",
+			"actor":"主演:彭于晏,倪妮,余文乐",
+			"imgUrl":"http://p1.meituan.net/movie/53b25618e98f0ff82f633c31a0d8e78a463347.jpg@128w_180h",
+			"totaytime":"今天176家影院放映2632场"
+		},
+
+		{
+			"id":"888",
+			"name":"父子雄兵",
+			"gut":"剧情,动作,奇幻",
+			"actor":"主演:彭于晏,倪妮,余文乐",
+			"imgUrl":"http://p0.meituan.net/movie/408f53c86382da0b959941904c01c32b291291.jpg@128w_180h",
+			"totaytime":"今天176家影院放映2632场"
+		}
+
+	],
+
+
+
+	"cinime":[
+
+		{
+			"id":111,
+			"name":"万达国际影城(高新园店)",
+			"price":"33",
+			"addres":"甘井子区高新园黄浦路500号万达广场4层"
+		},
+
+		{
+			"id":222,
+			"name":"米高梅国际影城(高新店)",
+			"price":"28",
+			"addres":"甘井子区高新园区黄浦路517号(锦辉购物广场5层)"
+		},
+
+
+		{
+			"id":333,
+			"name":"华晨影城(软件园店)",
+			"price":"23",
+			"addres":"沙河口区数码广场南段13号锦辉商城东财书香苑店"
+		},
+
+		{
+			"id":444,
+			"name":"华晨影城(软件园店)",
+			"price":"23",
+			"addres":"沙河口区数码广场南段13号锦辉商城东财书香苑店"
+		},
+
+
+		{
+			"id":555,
+			"name":"华晨影城(软件园店)",
+			"price":"23",
+			"addres":"沙河口区数码广场南段13号锦辉商城东财书香苑店"
+		}
+
+	],
+
+	"regist":[
+		{
+			"id":1,
+			"usename":"taiying",
+			"psw":"1234567"
+		}
+	]
+
+}
