@@ -43,7 +43,7 @@ const route =(
 			<Route path="/myaccount" component={Myaccount}/>	
 			<Route path="/regist" component={Regist}/>
 			<Route path="/myder" component={Myder}/>
-			<Route path="/detail/:kerwinID" component={Detail}/>
+			<Route path="/detail" component={Detail}/>
 			<Route path="/More" component={More}/>
 			<Redirect from="/" to="/home"/>{/*默认跳转投资项目*/}
 			</Switch>

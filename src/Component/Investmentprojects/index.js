@@ -17,13 +17,13 @@ class Investmentprojects extends Component{
 			<NavLink to="/investmentprojects/investmentproject" activeClassName="active">投资项目</NavLink>
 			</li>
 			<li>
-			<NavLink to="/investmentprojects/profit" activeClassName="active">收益</NavLink>
+			收益
 			</li>
 			<li>
-			<NavLink to="/investmentprojects/term" activeClassName="active">期限</NavLink>
+			期限
 			</li>
 			<li>
-			<NavLink to="/investmentprojects/speedofprogress" activeClassName="active">进度</NavLink>
+			进度
 			</li>
 			</ul>
 			{this.props.children}

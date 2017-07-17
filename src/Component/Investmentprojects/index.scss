@@ -5,6 +5,10 @@
 		height:90px;
 		line-height: 90px;
 		background:#fff;
+		top:80px;
+		position:fixed;
+		width:100%;
+		z-index:90;
 		li{
 			float:left;
 			width:25%;
@@ -26,6 +30,9 @@
 				color:#797979;
 			    }}
 			}
+		}
+		li:hover{
+			color:red;
 		}
 	}
 }

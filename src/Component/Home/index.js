@@ -45,11 +45,12 @@ class Home extends Component{
 				<div className="xiangqing">
 				<NavLink to="/detail" activeClassName="suiyi"></NavLink>
 				</div>
-				<a href="javascript:;" className="tiao"><section className="dong">
+				<NavLink to="/detail" activeClassName="suiyi" className="tiao">
+				<section className="dong">
 					<canvas id="canvas" width="500" height="500"></canvas>
 					<span className="up">预期年化收益率</span>
 					<span className="down">5.90%</span>
-				</section></a>
+				</section></NavLink>
 				<ul>  
 					<li>1000元起投</li>
 					<li>期限58天</li>
