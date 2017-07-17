@@ -19,32 +19,32 @@ class Regist extends Component{
 				<form>	
 					<div className="yi">
 						<label>手机号码
-						<input type="tel" placeHolder="请输入手机号码" maxLength="11" className="shouji"/>
+						<input type="tel" placeholder="请输入手机号码" maxLength="11" className="shouji"/>
 						</label>
 					</div>
 					<div className="er">
 						<label>图形验证码
-						<input type="text" placeHolder="请输入图形验证码" className="tuxing"/>
+						<input type="text" placeholder="请输入图形验证码" className="tuxing"/>
 						</label>
 					</div>
 					<div className="san">
 						<label>验证码
-						<input type="text" placeHolder="请输入验证码"  className="yanzheng"/>
+						<input type="text" placeholder="请输入验证码"  className="yanzheng"/>
 						</label>
 					</div>
 					<div className="si">
 						<label>登录密码
-						<input type="password" placeHolder="请输入登录密码" maxLength="11" className="denglu"/>
+						<input type="password" placeholder="请输入登录密码" maxLength="11" className="denglu"/>
 						</label>
 					</div>
 					<div className="wu">
 						<label>确认密码
-						<input type="password" placeHolder="请确认登录密码" maxLength="11" className="queren"/>
+						<input type="password" placeholder="请确认登录密码" maxLength="11" className="queren"/>
 						</label>
 					</div>
 					<div className="liu">
 						<label>邀请码
-						<input type="text" placeHolder="请输入邀请码（选填）" className="yaoqing"/>
+						<input type="text" placeholder="请输入邀请码（选填）" className="yaoqing"/>
 						</label>
 					</div>
 					<p className="yaoqiu">

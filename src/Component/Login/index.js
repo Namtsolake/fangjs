@@ -27,12 +27,12 @@ class Login extends Component{
 				<form>	
 					<div className="yi">
 						<label>手机号码
-						<input type="tel" placeHolder="请输入手机号码" maxLength="11" className="shouji"/>
+						<input type="tel" placeholder="请输入手机号码" maxLength="11" className="shouji"/>
 						</label>
 					</div>
 					<div className="si">
 						<label>登录密码
-						<input type="tel" placeHolder="请输入登录密码" maxLength="11" className="denglu"/>
+						<input type="tel" placeholder="请输入登录密码" maxLength="11" className="denglu"/>
 						</label>
 					</div>
 					<div className="anniu">
