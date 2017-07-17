@@ -9,16 +9,35 @@ import {
 class Home extends Component{
 	constructor(prop){
 		super(prop);
+		this.state={
+					looplist:[],
+					
+				}
 
 	}
-	
+	componentDidMount(){
+			axios.get("/mobile/api/v1/banners").then(res=>{
+				console.log(res.data);
+				this.setState({
+					looplist:res.data
+				})
+			})
+
+			
+		}
 	render(){
 		return(
 			<div id="home">
 			<div className="all">
 				
 				<div className="lunbo">
-					
+					<ReactSwipe className="carousel" swipeOptions={{continuous: true,auto:2000}} key={this.state.looplist.length}>{/*为了让react-swipe重新渲染， 需要安装文档设置key值为key={this.state.looplist.length} https://github.com/voronianski/react-swipe*/}
+                {
+                	this.state.looplist.map((item,index)=>
+                		<img src={item.image} key={item.image}/>
+                		)
+                }
+            </ReactSwipe>
 				</div>
 				<div className="gonggao">
 				<p>最新公告：<span>房金贷+部分借款提前还款公告</span></p>
