@@ -12,7 +12,7 @@ class Investmentproject extends Component{
 
 
 	render(){
-		return(
+		return( 
 			<div id="investmentproject">
 					<div id="del">
 						<div className="del-col">
