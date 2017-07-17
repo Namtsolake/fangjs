@@ -1,4 +1,4 @@
-draw(99, Math.PI/2);
+
  function draw(percent, sR) {
       if (percent < 0 || percent > 100) {
         return;

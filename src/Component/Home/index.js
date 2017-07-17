@@ -16,6 +16,7 @@ class Home extends Component{
 
 	}
 	componentDidMount(){
+			draw(99, Math.PI/2);
 			axios.get("/mobile/api/v1/banners").then(res=>{
 				console.log(res.data);
 				this.setState({
@@ -24,8 +25,7 @@ class Home extends Component{
 			})
 
 			
-		}
-	render(){
+		}	render(){
 		return(
 			<div id="home">
 			<div className="all">
