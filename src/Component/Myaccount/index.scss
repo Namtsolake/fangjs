@@ -1,0 +1,161 @@
+#Myaccount{
+	body{
+		width: 100%;
+		background-color: #f3f3f3;
+	}
+	.all{
+		width: 100%;
+		.datu{
+			width: 100%;
+			height: 1.01rem;
+			background: url(https://static.fangjs.com/fjsfp/static/m/v1.1.4/img/account/account.main.bg.jpg) center no-repeat;
+			font-size: .16rem;
+			position: relative;
+			p{
+				display: inline-block;
+				width: 100%;
+				height: .2rem;
+				line-height: .2rem;
+				position: absolute;
+				left: .95rem;
+				color: #fff;
+				top: .25rem;
+			}
+			span{
+				display: inline-block;
+				position: absolute;
+			}	
+			.yi{
+				width: .67rem;
+				height: .67rem;
+				background: url(https://static.fangjs.com/fjsfp/static/m/v1.1.4/img/account/default.png) center no-repeat ;
+				border-radius: 50%;
+				background-size: .67rem;
+				top: .25rem;
+				left: .12rem;
+			}	
+			.xin{
+				display: inline-block;
+				position: absolute;
+				width: .18rem;
+				height: .15rem;
+				left: .96rem;
+				top: .63rem;
+				.er{
+					width: .16rem;
+					height: .11rem;
+					background: url(https://static.fangjs.com/fjsfp/static/m/v1.1.4/img/account/icon.msg.png) center no-repeat;
+					border: 1px solid #fff;
+				}
+			}
+			.chong{
+				width: .83rem;
+				height: .36rem;
+				position: absolute;
+				border-radius: .07rem;
+				background: #fff;
+				right: .12rem;
+				top: .5rem;
+				color: red;
+				font-size: .18rem;
+				line-height: .36rem;
+				.san{
+					width: .83rem;
+					height: .36rem;
+					border-radius: .07rem;
+					text-align: center;
+				}
+			}
+		}
+		ul{
+			width: 100%;
+			justify-content: center;
+			height: .85rem;
+			background: url(https://static.fangjs.com/fjsfp/static/m/v1.1.4/img/account/account.main.bg.jpg) center no-repeat;
+			display: flex;
+			flex-direction: row;
+			li{
+				width: 1.785rem;
+				height: .85rem;
+				text-align: center;
+				color: #FFF;
+				font-size: .16rem;
+				position: relative;
+				.aa{
+					position: absolute;
+					top: .2rem;
+					font-size: .14rem;
+					left: .5rem;
+				}
+				.ab{
+					font-size: .25rem;
+					line-height: .2rem;
+					position: absolute;
+					top: .4rem;
+					left: .65rem;
+				}
+				.ba{
+					position: absolute;
+					top: .2rem;
+					font-size: .14rem;
+					left: .5rem;
+				}
+				.bb{
+					font-size: .25rem;
+					line-height: .2rem;
+					position: absolute;
+					top: .4rem;
+					left: .65rem;
+				}
+			}
+		}
+		.hea{
+			width: 100%;
+			height: .71rem;
+			font-size: .14rem;
+			position: relative;
+			background: #f3f3f3;
+			border-bottom: 1px solid #ccc;
+			span{
+				position: absolute;
+				top: .2rem;
+			} 
+
+		}
+		.heb{
+			width: 100%;
+			height: .71rem;
+			font-size: .14rem;
+			position: relative;
+			background: #f3f3f3;
+			.you{
+				position: absolute;
+				right: .3rem;
+				padding-left: .63rem;
+				span{
+				position: absolute;
+				top: .2rem;
+				} 
+			}
+
+		}
+		.zuo{
+			position: relative;
+			
+			height: .4rem;
+			float: left;
+			top: .3rem;
+			left: .2rem;
+		}
+		.you{
+			position: relative;
+			
+			height: .4rem;
+			float: right;
+			top: .3rem;
+			right: .2rem;
+			border-left: 1px solid #ccc;
+			padding-left: .6rem;
+		}
+	}
+}
