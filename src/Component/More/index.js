@@ -36,7 +36,7 @@ class More extends Component{
 							<p></p>
 						</div>
 						<div className="liu">
-						<NavLink to="/home" activeClassName="suiyi">房金所介绍</NavLink><span><a href="javascript:;">></a></span>	
+						<NavLink to="/myder" activeClassName="suiyi">房金所介绍</NavLink><span><a href="javascript:;">></a></span>	
 							<p></p>
 						</div>
 						<div className="qi"></div>

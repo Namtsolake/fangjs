@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import "./index.scss";
+// import "./canvas.js";
 import axios from "axios";
 import ReactSwipe from "react-swipe";
 import {
