@@ -11,6 +11,10 @@ class Home extends Component{
 		super(prop);
 
 	}
+
+	componentDidMount() {
+		draw(99, Math.PI/2);
+	}
 	
 	render(){
 		return(
