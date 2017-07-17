@@ -1,15 +1,118 @@
 #investmentproject{
-
-	ul{
-
-		li{
-			overflow:hidden;
-			padding:10px;
-			img{
-				float:left;
-				width:80px;
-			}
-
-		}
+	*{
+		margin:0;
+		padding:0;
 	}
+	background:#ccc;
+		#del{
+			margin-top:15px;
+			display: block;
+			width:100%;
+			height:250px;
+			background:#fff;
+			.del-col{
+				position:relative;
+				height:195px;
+				padding:40px 0 0 20px;
+				.del-img{
+					position:absolute;
+					background:url(../../assets/img/products-type.png);
+					background-position: 0 	20px;
+					background-size: cover;
+					left:0;
+					top:0;
+					width:74px;
+					height:20px;
+					display: block;
+					zoom:2;
+				}
+				.del-col-top{
+					width:100%;
+					height:155px;
+					border-bottom: 1px solid #ccc;
+					.del-col-top-info{
+						width:80%;
+						float:left;
+						.del-col-top-info-tit{
+							height:50px;
+							font-size:26px;
+							overflow: hidden; 
+							text-overflow:ellipsis; 
+							white-space: nowrap;
+						}
+						.del-col-top-left-down{
+							overflow: auto;
+							width:100%;
+							
+							.perc2-left{
+								width:208px;
+								color:red;
+								font-size:70px;
+								font-weight:bolder;
+								float:left;
+							}
+							.perc2-right{
+								float:left;	
+								.perc2-right-1{
+									.p1{
+										padding:15px 0px 0px 20px;
+										font-size:25px;
+									}
+								}
+								.perc2-right-2{
+									padding-left:20px;
+										font-size:25px;
+										color:#999;
+										.spa1{
+											padding-right:10px;
+										}
+										.spa2{
+											padding:0px 10px;
+										}
+								}
+							}
+						}
+					}
+					.del-col-top-perc1{
+						float: right;
+						height:100%;
+						position:relative;
+							.perc1-div{
+									position:absolute;
+									top:10px;
+									right:10px;
+									width:110px;
+									height:110px;
+									border:10px solid #56D8A2;
+									border-radius:50%;
+									text-align:center;
+									line-height:90px;					
+								.spa3{
+									font-size:28px;
+									font-weight:bolder;
+								}
+							}
+					}
+				}
+			}
+			.del-col-bottom{
+				position: relative;
+				padding:10px 0 0 20px;
+				.del-col-bottom-word{
+					margin-left:60px;
+					font-size:33px;
+					line-height:33px;
+					color:#999;
+					.del-col-bottom-delpic{
+						position:absolute;
+						left:20px;
+						display: inline-block;
+						zoom:1.2;
+						width:26px;
+						height:30px;
+						background:url(../../assets/img/del-pic.png)
+					}
+				}					
+			}
+		}
 }

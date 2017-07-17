@@ -2,7 +2,7 @@ import React from "react";
 import App from "./Component/App/index";
 import Home from "./Component/Home/index";
 import Investmentprojects from "./Component/Investmentprojects/index";
-// import Myaccount from "./Component/Myaccount/index";
+import Myaccount from "./Component/Myaccount/index";
 import More from "./Component/More/index";
 import Regist from "./Component/Regist/index";
 import Login from "./Component/Login/index";
@@ -40,7 +40,7 @@ const route =(
 			</Investmentprojects>
 			}/>
 			<Route path="/login" component={Login}/>	
-
+			<Route path="/myaccount" component={Myaccount}/>	
 			<Route path="/regist" component={Regist}/>
 			<Route path="/myder" component={Myder}/>
 			<Route path="/detail/:kerwinID" component={Detail}/>
