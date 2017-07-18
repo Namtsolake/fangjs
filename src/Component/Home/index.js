@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import "./index.scss";
-// import "./canvas.js";
+import draw from "./test.js";
 import axios from "axios";
 import ReactSwipe from "react-swipe";
 import {
@@ -16,6 +16,7 @@ class Home extends Component{
 
 	}
 	componentDidMount(){
+			
 			draw(99, Math.PI/2);
 			axios.get("/mobile/api/v1/banners").then(res=>{
 				console.log(res.data);

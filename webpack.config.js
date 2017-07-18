@@ -26,6 +26,7 @@ module.exports = {
                    host: 'fangjs.sina.com.cn',
                    changeOrigin:true
                },
+            "/api":"http://127.0.0.1/Thinkphp/public/"
 
          }
 

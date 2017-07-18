@@ -6,7 +6,27 @@ import {
 
 class Login extends Component{
 	constructor(props){
-		super(props)
+		super(props);
+		this.login = this.login.bind(this);
+	}
+	login(){
+		fetch('/api/user/login', {
+			headers: {
+			    'Content-Type': 'application/x-www-form-urlencoded'
+			  },
+			credentials: 'include',
+		  method: 'POST',
+		  body: "username=" + this.refs.username.value+"&psw="+ this.refs.psw.value
+		}).then(function(res){
+			return res.text();
+		}).then(function(data){
+			console.log(data);
+			// if(data ==="登陆成功"){
+			// 	browserHistory.push('/mai');
+			// }
+			
+			
+		})
 	}
 
 	// componentDidMount(){
@@ -27,16 +47,16 @@ class Login extends Component{
 				<form>	
 					<div className="yi">
 						<label>手机号码
-						<input type="tel" placeholder="请输入手机号码" maxLength="11" className="shouji"/>
+						<input type="tel" placeholder="请输入手机号码" ref="username" maxLength="11" className="shouji"/>
 						</label>
 					</div>
 					<div className="si">
 						<label>登录密码
-						<input type="tel" placeholder="请输入登录密码" maxLength="11" className="denglu"/>
+						<input type="password" placeholder="请输入登录密码" ref="psw" maxLength="11" className="denglu"/>
 						</label>
 					</div>
 					<div className="anniu">
-						<button>登录</button>
+						<button onClick = {this.login}>登录</button>
 					</div>
 				</form>	
 				<div className="wangji">

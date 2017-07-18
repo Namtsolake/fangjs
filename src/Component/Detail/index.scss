@@ -1,0 +1,44 @@
+#Detail{
+	ul.two{
+		overflow:hidden;
+		text-align:center;
+		height:97px;
+		line-height: 90px;
+		background:#fff;
+		top:80px;
+		position:fixed;
+		width:100%;
+		z-index:99;
+		li{
+			float:left;
+			width:33%;
+			font-size:32px;
+			
+			.active{
+				color:red;
+	    	a{
+	    		text-decoration:none;
+	    		text-align: center;
+	    		padding-top: 12px;
+				padding-left: 12px;
+				font-size: 25px;
+				color:#797979;
+			
+	    	  &:visited{
+				color:#797979;
+			}
+			&:link{
+				color:#797979;
+			    }}
+			}
+		}
+		li:hover{
+			color:red;
+		}
+	}
+	.active{
+		height:100%;
+		display:block;
+		border-bottom:5px solid red;
+	}
+}

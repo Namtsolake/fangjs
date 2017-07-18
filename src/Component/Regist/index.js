@@ -7,6 +7,21 @@ import {
 class Regist extends Component{
 	constructor(prop){
 		super(prop)
+		this.regist = this.regist.bind(this);
+
+	}
+	regist(){
+		fetch('/api/user/regest', {
+			headers: {
+			    'Content-Type': 'application/x-www-form-urlencoded'
+			  },
+		  method: 'POST',
+		  body: "username=" + this.refs.username.value+"&psw="+ this.refs.psw.value
+		}).then(function(res){
+			return res.text();
+		}).then(function(data){
+			console.log(data);
+		})
 	}
 
 	render(){
@@ -19,7 +34,7 @@ class Regist extends Component{
 				<form>	
 					<div className="yi">
 						<label>手机号码
-						<input type="tel" placeholder="请输入手机号码" maxLength="11" className="shouji"/>
+						<input type="tel" ref="username" placeholder="请输入手机号码" maxLength="11" className="shouji" ref="username"/>
 						</label>
 					</div>
 					<div className="er">
@@ -34,7 +49,7 @@ class Regist extends Component{
 					</div>
 					<div className="si">
 						<label>登录密码
-						<input type="password" placeholder="请输入登录密码" maxLength="11" className="denglu"/>
+						<input type="password" ref="psw" placeholder="请输入登录密码" maxLength="11" className="denglu"/>
 						</label>
 					</div>
 					<div className="wu">
@@ -54,7 +69,7 @@ class Regist extends Component{
 					已有账号，<NavLink to="/login" activeClassName="suiyi"><span>直接登录></span></NavLink>
 					</p>
 					<div className="anniu">
-						<button>提交注册</button>
+						<button onClick = {this.regist}>提交注册</button>
 					</div>
 				</form>	
 				<div className="xieyi">

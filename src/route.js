@@ -12,6 +12,9 @@ import Profit from "./Component/Profit/index";
 import Term from "./Component/Term/index";
 import Speedofprogress from "./Component/Speedofprogress/index";
 import Detail from "./Component/Detail/index";
+import Projectdetails from "./Component/Projectdetails/index";
+import Auditinformation from "./Component/Auditinformation/index";
+import Investmentrecord from "./Component/Investmentrecord/index";
 import {
 	HashRouter as Router,
 	Route,
@@ -39,6 +42,18 @@ const route =(
 			</Switch>
 			</Investmentprojects>
 			}/>
+
+			<Route path="/detail" render={()=>
+			<Detail>
+			<Switch>
+				<Route path="/detail/projectdetails" component={Projectdetails}/>
+				<Route path="/detail/auditinformation" component={Auditinformation}/>
+				<Route path="/detail/investmentrecord" component={Investmentrecord}/>
+				<Redirect from="/detail" to="/detail/projectdetails"/>{/*默认跳转投资项目*/}
+			</Switch>
+			</Detail>
+			}/>
+
 			<Route path="/login" component={Login}/>	
 			<Route path="/myaccount" component={Myaccount}/>	
 			<Route path="/regist" component={Regist}/>
