@@ -9,25 +9,7 @@ class Login extends Component{
 		super(props);
 		this.login = this.login.bind(this);
 	}
-	login(){
-		fetch('/api/user/login', {
-			headers: {
-			    'Content-Type': 'application/x-www-form-urlencoded'
-			  },
-			credentials: 'include',
-		  method: 'POST',
-		  body: "username=" + this.refs.username.value+"&psw="+ this.refs.psw.value
-		}).then(function(res){
-			return res.text();
-		}).then(function(data){
-			console.log(data);
-			// if(data ==="登陆成功"){
-			// 	browserHistory.push('/mai');
-			// }
-			
-			
-		})
-	}
+	
 
 	// componentDidMount(){
 	// 		axios.get("../../data.json").then(res=>{
@@ -41,8 +23,7 @@ class Login extends Component{
 	render(){
 		return(
 			<div id="login">
-			
-		
+
 				<div className="datu"></div>
 				<form>	
 					<div className="yi">
@@ -68,6 +49,26 @@ class Login extends Component{
 			
 			</div>
 			)
+	}
+
+	login(){
+		fetch('/api/user/login', {
+			headers: {
+			    'Content-Type': 'application/x-www-form-urlencoded'
+			  },
+			credentials: 'include',
+		  method: 'POST',
+		  body: "username=" + this.refs.username.value+"&psw="+ this.refs.psw.value
+		}).then(function(res){
+			return res.text();
+		}).then(function(data){
+			console.log(data);
+			if(data ==="登陆成功"){
+				browserHistory.push('/myaccount');
+			}
+			
+			
+		})
 	}
 }
 
