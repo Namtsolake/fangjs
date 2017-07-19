@@ -8,9 +8,9 @@ class Investmentrecord extends Component{
 
 	render(){
 		return(
-			<div>
-			Investmentrecord
-			</div>
+			<div id="record">
+					<div className="recordInfo"></div>
+				</div>
 			)
 	}
 }

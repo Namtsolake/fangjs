@@ -96,6 +96,14 @@
 				font-size: .14rem;
 				text-indent: .1rem;
 			}
+			.ts1{
+				display: none;
+				color:red;
+				height:25px;
+				text-align:center;
+				// z-index:99;
+				 font-size:22px;
+			}
 		}
 		label{
 			float: left;
@@ -116,6 +124,13 @@
 				color: #000;
 				font-size: .14rem;
 				text-indent: .1rem;
+			}
+			.ts2{
+				display: none;
+				color:red;
+				height:25px;
+				text-align:center;
+				font-size:22px;
 			}
 		}
 		.anniu{

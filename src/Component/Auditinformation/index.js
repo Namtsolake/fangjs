@@ -8,9 +8,9 @@ class Auditinformation extends Component{
 
 	render(){
 		return(
-			<div>
-			Auditinformation
-			</div>
+				<div id="audit">
+					<div className="auditInfo"></div>
+				</div>
 			)
 	}
 }
