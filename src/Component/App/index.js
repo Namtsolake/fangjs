@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import "./index.scss";
 import "../../assets/iconfont/iconfont.css"
-import {
+import { 
 	NavLink
 }from "react-router-dom";
 
