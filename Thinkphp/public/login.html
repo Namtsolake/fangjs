@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src = "http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+用户名：<input type="text" id = "username"/></br></br>
+密 码:<input type="text" id = "psw"/></br></br>
+
+<input type="button" id="btn" value="登录">
+<script>
+	$("body").delegate("#btn","click",function(){
+		$.ajax({
+		url:"/Thinkphp/public/api/user/login",
+		type:"post",
+		data:{
+			username:$("#username").val(),
+			psw:$("#psw").val(),
+			
+		},
+		success:function(data){
+			console.log(data);
+
+		}
+	})
+	})
+	
+</script>
+
+</body>
+</html>

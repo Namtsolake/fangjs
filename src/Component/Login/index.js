@@ -14,22 +14,51 @@ class Login extends Component{
 	
 
 	login(){
-		fetch('/api/user/login', {
-			headers: {
-			    'Content-Type': 'application/x-www-form-urlencoded'
-			  },
-			credentials: 'include',
-		  method: 'POST',
-		  body: "username=" + this.refs.username.value+"&psw="+ this.refs.psw.value
-		}).then(function(res){
-			return res.text();
-		}).then((data)=>{
-			console.log(data);
-			if(data ==="登陆成功"){
-				this.props.history.push('/myaccount');
-			}
-		})
+		var zj=/^1[34578]\d{9}$/;
+		var mm=/^[a-zA-Z0-9]{6,}$/;
+		var username=document.querySelector(".shouji").value;
+		var psw=document.querySelector(".denglu").value;
+
+		if (username==""||zj.test(username)==false){
+			document.querySelector(".ts1").style.display='block';
+		} else if ( psw==""||mm.test(psw)==false){
+			document.querySelector(".ts2").style.display='block';
+		}else{
+			fetch('/api/user/login', {
+				headers: {
+				    'Content-Type': 'application/x-www-form-urlencoded'
+				  },
+				credentials: 'include',
+			  method: 'POST',
+			  body: "username=" + username + "&psw=" + psw
+			}).then(function(res){
+				return res.text();
+			}).then((data)=>{
+				console.log(data);
+				if(data ==="登陆成功"){
+					this.props.history.push('/myaccount');
+				}
+			})
+		}
 	}
+
+	// login(){
+	// 	fetch('/api/user/login', {
+	// 		headers: {
+	// 		    'Content-Type': 'application/x-www-form-urlencoded'
+	// 		  },
+	// 		credentials: 'include',
+	// 	  method: 'POST',
+	// 	  body: "username=" + this.refs.username.value+"&psw="+ this.refs.psw.value
+	// 	}).then(function(res){
+	// 		return res.text();
+	// 	}).then((data)=>{
+	// 		console.log(data);
+	// 		if(data ==="登陆成功"){
+	// 			this.props.history.push('/myaccount');
+	// 		}
+	// 	})
+	// }
 	// componentDidMount(){
 	// 		axios.get("../../data.json").then(res=>{
 	// 			console.log(res.data.regist);
@@ -108,3 +137,5 @@ class Login extends Component{
 }
 
 export default Login; 
+
+

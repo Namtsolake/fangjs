@@ -21,6 +21,7 @@ class App extends Component{
 
 			<header>
 			<p>房金所</p>
+			<a className="addIcon"></a>
 			{/*<span>
 			<img src="">
 			</span>*/}

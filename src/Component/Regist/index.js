@@ -11,7 +11,21 @@ class Regist extends Component{
 
 	}
 	regist(){
-		fetch('/api/user/regest', {
+			var zj=/^1[34578]\d{9}$/;
+			var mm=/^[a-zA-Z0-9]{6,}$/;
+			var username=document.querySelector(".shouji").value;
+			// var tuxing=document.querySelector(".tuxing").value;
+			// var yanzheng=document.querySelector(".yanzheng").value;
+			var denglu=document.querySelector(".denglu").value;
+			// var queren=document.querySelector(".queren").value;
+			// var yaoqing=document.querySelector(".yaoqing").value;
+
+			if(username==""||zj.test(username)==false){
+			   document.querySelector(".ts1").style.display='block';
+			}else if(denglu==""||mm.test(denglu)==false){
+	 	   document.querySelector(".ts4").style.display='block';
+	 		}else{
+	 				fetch('/api/user/regest', {
 			headers: {
 			    'Content-Type': 'application/x-www-form-urlencoded'
 			  },
@@ -19,9 +33,13 @@ class Regist extends Component{
 		  body: "username=" + this.refs.username.value+"&psw="+ this.refs.psw.value
 		}).then(function(res){
 			return res.text();
-		}).then(function(data){
+		}).then((data)=>{
 			console.log(data);
+			if(data ==="注册成功！"){
+					this.props.history.push('/login');
+				}
 		})
+	 	}
 	}
 
 	render(){
@@ -68,7 +86,7 @@ class Regist extends Component{
 						</label>
 					</div>
 					<p className="yaoqiu">
-						*8-20个字符（字母、数字），区分大小写
+						*6个字符（字母、数字），区分大小写
 					</p>
 					<p className="zhijie">
 					已有账号，<NavLink to="/login" activeClassName="suiyi"><span>直接登录></span></NavLink>
@@ -269,7 +287,7 @@ class Regist extends Component{
 	 	//     document.querySelector(".ts3").innerHTML='输入正确'
 	 	// }
 
-	 	if(denglu==""||zj.test(denglu)==false){
+	 	if(denglu==""||mm.test(denglu)==false){
 	 	   document.querySelector(".ts4").style.display='block';
 	 	}else{
 	 	    document.querySelector(".ts4").style.display='block';
@@ -322,7 +340,7 @@ class Regist extends Component{
 	 	//     document.querySelector(".ts4").innerHTML='输入正确'
 	 	// }
 
-	 	if(queren==""||zj.test(queren)==false){
+	 	if(queren==""||mm.test(queren)==false){
 	 	   document.querySelector(".ts5").style.display='block';
 	 	}else{
 	 	    document.querySelector(".ts5").style.display='block';
@@ -332,3 +350,4 @@ class Regist extends Component{
 }
 
 export default Regist;
+

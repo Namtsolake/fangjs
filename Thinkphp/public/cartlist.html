@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>购物车</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src = "http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div id="cartList">
+</div>
+总计：<span id="total"></span>
+
+<script type="text/javascript" src="js/template-web.js"></script>
+<script type="text/html" id="test">
+{{if list}}  
+    {{each list as item index}}  
+        <div class="row">
+        	<span>{{item.name}}</span>
+        	<span class="price">{{item.price}}</span>
+        	<button class="minus">-</button>
+        	<input type="text" class="count" value="{{item.count}}">
+        	<button class="plus">+</button>
+        	<span class="subtotal"></span>
+        </div>
+    {{/each}}  
+{{/if}} 
+</script>
+<script>
+	$.ajax({
+		url: "/Thinkphp/public/api/Shopcart/cartlist",
+		type: "post",
+		data: {
+		},
+		success: function(data) {
+			console.log(data);
+			if(data.list) {
+				var content = template('test', data);
+				$("#cartList").html(content);
+			}
+		}
+	});
+	$("body").delegate(".count", "input", calcSubtotal);
+	$("body").delegate(".minus", "click", minusFun);
+	$("body").delegate(".plus", "click", plusFun);
+	
+	function minusFun() {
+		var count = $(this).parents(".row").find(".count").val();
+		count--;
+		if(count < 1) {
+			count = 1;
+		}
+		$(this).parents(".row").find(".count").val(count);
+		calcSubtotal.call(this);
+	}
+
+	function plusFun() {
+		var count = $(this).parents(".row").find(".count").val();
+		count++;
+		$(this).parents(".row").find(".count").val(count);
+		calcSubtotal.call(this);
+	}
+
+	function calcSubtotal() {
+		var priceVal = $(this).parents(".row").find(".price").text();
+		console.log(priceVal);
+		var count = $(this).parents(".row").find(".count").val();
+		var subtotal = parseInt(priceVal) * parseInt(count);
+		console.log(subtotal);
+
+		$(this).parents(".row").find(".subtotal").text(subtotal);
+		calcTotal();
+	}
+
+	function calcTotal() {
+		var total = 0;
+		$(".subtotal").map(function(idx, item) {
+			total += parseInt(item.innerText ? item.innerText : 0);
+		})
+		$("#total").text(total);
+	}
+</script>
+
+</body>
+</html>

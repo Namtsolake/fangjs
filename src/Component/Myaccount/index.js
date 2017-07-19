@@ -11,7 +11,7 @@ class Myaccount extends Component{
 			<div id="Myaccount">
 			<div className="all">
 				<div className="datu">
-					<p id="tel">136****7649,您好!</p>
+					<p id="tel">您好,亲爱的主人!</p>
 					<span className="yi"></span>
 					<a className="xin"><span className="er"></span></a>
 					<a className="chong"><span className="san">充值</span></a>
