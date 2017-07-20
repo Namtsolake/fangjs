@@ -19,14 +19,15 @@ module.exports = {
 
         historyApiFallback: true,
 
-            //配置服务器支持反向代理功能
+            //配置服务器支持反向代理功能 10.2.154.177:3000/api/home
          proxy:{
-            '/mobile/api/v1/*': {
-                   target: 'http://fangjs.sina.com.cn',
-                   host: 'fangjs.sina.com.cn',
+            '/api/*': {
+                   target: 'http://10.2.154.177:3000',
+                   host: '10.2.154.177:3000',
                    changeOrigin:true
                },
-            "/api":"http://127.0.0.1/Thinkphp/public/"
+            "/index":"http://127.0.0.1/think/public/",
+                  
 
          }
 

@@ -9,7 +9,7 @@ class App extends Component{
 	constructor(props){
 		super(props);
 		this.state={
-			isShow:false,/*=号和nav一开始为隐藏*/
+			isShow:false,
 			isFirstShow:false
 		}
 	}
@@ -21,13 +21,39 @@ class App extends Component{
 
 			<header>
 			<p>房金所</p>
-			<a className="addIcon"></a>
+			<div id="addIcon" onClick={
+				()=>{
+					this.setState({
+							isShow:!this.state.isShow,
+							isFirstShow:true
+						})
+				}
+			}></div>
+			<nav className={this.state.isShow?'show':'hide'} 
+				style={{display:this.state.isFirstShow?'block':'none'}}
+			>
+				<ul id="headNav" onClick={()=>{
+					this.setState({
+						isShow:!this.state.isShow
+					})
+				}}>
+					<li>
+						<i className="pic1"></i><a>完善资料</a>
+					</li>
+					<li>
+						<i className="pic2"></i><a>充值</a>
+					</li>
+					<li>
+						<i className="pic3"></i><a>提现</a>
+					</li>
+				</ul>
+			</nav>
 			{/*<span>
 			<img src="">
 			</span>*/}
 			</header>
 
-			<section>{/*红色header下面的*/}
+			<section>
 			{this.props.children}
 			</section>
 

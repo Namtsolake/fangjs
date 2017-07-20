@@ -15,28 +15,30 @@ class Regist extends Component{
 			var mm=/^[a-zA-Z0-9]{6,}$/;
 			var username=document.querySelector(".shouji").value;
 			// var tuxing=document.querySelector(".tuxing").value;
-			// var yanzheng=document.querySelector(".yanzheng").value;
 			var denglu=document.querySelector(".denglu").value;
-			// var queren=document.querySelector(".queren").value;
-			// var yaoqing=document.querySelector(".yaoqing").value;
+			var queren=document.querySelector(".queren").value;
 
 			if(username==""||zj.test(username)==false){
 			   document.querySelector(".ts1").style.display='block';
 			}else if(denglu==""||mm.test(denglu)==false){
-	 	   document.querySelector(".ts4").style.display='block';
+	 	   		document.querySelector(".ts4").style.display='block';
+	 		}else if(denglu!==queren){
+	 	   		document.querySelector(".ts5").style.display='block';
 	 		}else{
-	 				fetch('/api/user/regest', {
+	 				fetch('/index/index/regist4ajax', {
 			headers: {
 			    'Content-Type': 'application/x-www-form-urlencoded'
 			  },
 		  method: 'POST',
-		  body: "username=" + this.refs.username.value+"&psw="+ this.refs.psw.value
+		  body: "username=" + username +"&psw="+ denglu
 		}).then(function(res){
-			return res.text();
+			return res.json();
 		}).then((data)=>{
 			console.log(data);
-			if(data ==="注册成功！"){
+			if(data.code){
 					this.props.history.push('/login');
+				}else{
+					alert("请检查")
 				}
 		})
 	 	}
@@ -116,122 +118,32 @@ class Regist extends Component{
 	}
 	 chkvalue() {
 	 	var zj=/^1[34578]\d{9}$/;
-	 	var mm=/^[a-zA-Z0-9]{6,}$/;
 	 	var username=document.querySelector(".shouji").value;
-	 	var tuxing=document.querySelector(".tuxing").value;
-	 	var yanzheng=document.querySelector(".yanzheng").value;
-	 	var denglu=document.querySelector(".denglu").value;
-	 	var queren=document.querySelector(".queren").value;
-	 	var yaoqing=document.querySelector(".yaoqing").value;
-	 	
-	 	// if(username==""){alert("文本框里必须填写内容!");}
+	 		 	
 	 	if(username==""||zj.test(username)==false){
 	 	   document.querySelector(".ts1").style.display='block';
 	 	}else{
 	 	    document.querySelector(".ts1").style.display='block';
 	 	    document.querySelector(".ts1").innerHTML='输入正确'
 	 	}
-
-	 	// if(tuxing==""||mm.test(tuxing)==false){
-	 	//     document.querySelector(".ts2").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts2").style.display='block';
-	 	//     document.querySelector(".ts2").innerHTML='输入正确'
-	 	// }
-
-	 	// if(yanzheng==""||zj.test(yanzheng)==false){
-	 	//    document.querySelector(".ts3").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts3").style.display='block';
-	 	//     document.querySelector(".ts3").innerHTML='输入正确'
-	 	// }
-
-	 	// if(denglu==""||zj.test(denglu)==false){
-	 	//    document.querySelector(".ts4").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts4").style.display='block';
-	 	//     document.querySelector(".ts4").innerHTML='输入正确'
-	 	// }
-
-	 	// if(queren==""||zj.test(queren)==false){
-	 	//    document.querySelector(".ts5").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts5").style.display='block';
-	 	//     document.querySelector(".ts5").innerHTML='输入正确'
-	 	// }
 	}
 
 	 chkvalue1() {
-	 	var zj=/^1[0-9]{10}$/;
 	 	var mm=/^[a-zA-Z0-9]{6,}$/;
-	 	var username=document.querySelector(".shouji").value;
 	 	var tuxing=document.querySelector(".tuxing").value;
-	 	var yanzheng=document.querySelector(".yanzheng").value;
-	 	var denglu=document.querySelector(".denglu").value;
-	 	var queren=document.querySelector(".queren").value;
-	 	var yaoqing=document.querySelector(".yaoqing").value;
-	 	
-	 	// if(username==""){alert("文本框里必须填写内容!");}
-	 	// if(username==""||zj.test(username)==false){
-	 	//    document.querySelector(".ts1").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts1").style.display='block';
-	 	//     document.querySelector(".ts1").innerHTML='输入正确'
-	 	// }
-
+	
 	 	if(tuxing==""||mm.test(tuxing)==false){
 	 	    document.querySelector(".ts2").style.display='block';
 	 	}else{
 	 	    document.querySelector(".ts2").style.display='block';
 	 	    document.querySelector(".ts2").innerHTML='输入正确'
 	 	}
-
-	 	// if(yanzheng==""||zj.test(yanzheng)==false){
-	 	//    document.querySelector(".ts3").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts3").style.display='block';
-	 	//     document.querySelector(".ts3").innerHTML='输入正确'
-	 	// }
-
-	 	// if(denglu==""||zj.test(denglu)==false){
-	 	//    document.querySelector(".ts4").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts4").style.display='block';
-	 	//     document.querySelector(".ts4").innerHTML='输入正确'
-	 	// }
-
-	 	// if(queren==""||zj.test(queren)==false){
-	 	//    document.querySelector(".ts5").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts5").style.display='block';
-	 	//     document.querySelector(".ts5").innerHTML='输入正确'
-	 	// }
 	}
 
 	 chkvalue2() {
 	 	var zj=/^1[0-9]{10}$/;
-	 	var mm=/^[a-zA-Z0-9]{6,}$/;
-	 	var username=document.querySelector(".shouji").value;
-	 	var tuxing=document.querySelector(".tuxing").value;
 	 	var yanzheng=document.querySelector(".yanzheng").value;
-	 	var denglu=document.querySelector(".denglu").value;
-	 	var queren=document.querySelector(".queren").value;
-	 	var yaoqing=document.querySelector(".yaoqing").value;
-	 	
-	 	// if(username==""){alert("文本框里必须填写内容!");}
-	 	// if(username==""||zj.test(username)==false){
-	 	//    document.querySelector(".ts1").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts1").style.display='block';
-	 	//     document.querySelector(".ts1").innerHTML='输入正确'
-	 	// }
 
-	 	// if(tuxing==""||mm.test(tuxing)==false){
-	 	//     document.querySelector(".ts2").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts2").style.display='block';
-	 	//     document.querySelector(".ts2").innerHTML='输入正确'
-	 	// }
 
 	 	if(yanzheng==""||zj.test(yanzheng)==false){
 	 	   document.querySelector(".ts3").style.display='block';
@@ -239,113 +151,30 @@ class Regist extends Component{
 	 	    document.querySelector(".ts3").style.display='block';
 	 	    document.querySelector(".ts3").innerHTML='输入正确'
 	 	}
-
-	 	// if(denglu==""||zj.test(denglu)==false){
-	 	//    document.querySelector(".ts4").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts4").style.display='block';
-	 	//     document.querySelector(".ts4").innerHTML='输入正确'
-	 	// }
-
-	 	// if(queren==""||zj.test(queren)==false){
-	 	//    document.querySelector(".ts5").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts5").style.display='block';
-	 	//     document.querySelector(".ts5").innerHTML='输入正确'
-	 	// }
 	}
 
 	chkvalue3() {
-	 	var zj=/^1[0-9]{10}$/;
 	 	var mm=/^[a-zA-Z0-9]{6,}$/;
-	 	var username=document.querySelector(".shouji").value;
-	 	var tuxing=document.querySelector(".tuxing").value;
-	 	var yanzheng=document.querySelector(".yanzheng").value;
 	 	var denglu=document.querySelector(".denglu").value;
-	 	var queren=document.querySelector(".queren").value;
-	 	var yaoqing=document.querySelector(".yaoqing").value;
 	 	
-	 	// if(username==""){alert("文本框里必须填写内容!");}
-	 	// if(username==""||zj.test(username)==false){
-	 	//    document.querySelector(".ts1").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts1").style.display='block';
-	 	//     document.querySelector(".ts1").innerHTML='输入正确'
-	 	// }
-
-	 	// if(tuxing==""||mm.test(tuxing)==false){
-	 	//     document.querySelector(".ts2").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts2").style.display='block';
-	 	//     document.querySelector(".ts2").innerHTML='输入正确'
-	 	// }
-
-	 	// if(yanzheng==""||zj.test(yanzheng)==false){
-	 	//    document.querySelector(".ts3").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts3").style.display='block';
-	 	//     document.querySelector(".ts3").innerHTML='输入正确'
-	 	// }
-
 	 	if(denglu==""||mm.test(denglu)==false){
 	 	   document.querySelector(".ts4").style.display='block';
 	 	}else{
 	 	    document.querySelector(".ts4").style.display='block';
 	 	    document.querySelector(".ts4").innerHTML='输入正确'
 	 	}
+	}
 
-	 	// if(queren==""||zj.test(queren)==false){
-	 	//    document.querySelector(".ts5").style.display='block';
+	chkvalue4() {
+	 	var mm=/^[a-zA-Z0-9]{6,}$/;
+	 	var queren=document.querySelector(".queren").value;
+	 	
+	 	if(queren==""||mm.test(queren)==false){
+	 	   document.querySelector(".ts5").style.display='block';}
 	 	// }else{
 	 	//     document.querySelector(".ts5").style.display='block';
 	 	//     document.querySelector(".ts5").innerHTML='输入正确'
 	 	// }
-	}
-	chkvalue4() {
-	 	var zj=/^1[0-9]{10}$/;
-	 	var mm=/^[a-zA-Z0-9]{6,}$/;
-	 	var username=document.querySelector(".shouji").value;
-	 	var tuxing=document.querySelector(".tuxing").value;
-	 	var yanzheng=document.querySelector(".yanzheng").value;
-	 	var denglu=document.querySelector(".denglu").value;
-	 	var queren=document.querySelector(".queren").value;
-	 	var yaoqing=document.querySelector(".yaoqing").value;
-	 	
-	 	// if(username==""){alert("文本框里必须填写内容!");}
-	 	// if(username==""||zj.test(username)==false){
-	 	//    document.querySelector(".ts1").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts1").style.display='block';
-	 	//     document.querySelector(".ts1").innerHTML='输入正确'
-	 	// }
-
-	 	// if(tuxing==""||mm.test(tuxing)==false){
-	 	//     document.querySelector(".ts2").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts2").style.display='block';
-	 	//     document.querySelector(".ts2").innerHTML='输入正确'
-	 	// }
-
-	 	// if(yanzheng==""||zj.test(yanzheng)==false){
-	 	//    document.querySelector(".ts3").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts3").style.display='block';
-	 	//     document.querySelector(".ts3").innerHTML='输入正确'
-	 	// }
-
-	 	// if(denglu==""||zj.test(denglu)==false){
-	 	//    document.querySelector(".ts4").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts4").style.display='block';
-	 	//     document.querySelector(".ts4").innerHTML='输入正确'
-	 	// }
-
-	 	if(queren==""||mm.test(queren)==false){
-	 	   document.querySelector(".ts5").style.display='block';
-	 	}else{
-	 	    document.querySelector(".ts5").style.display='block';
-	 	    document.querySelector(".ts5").innerHTML='输入正确'
-	 	}
 	}
 }
 

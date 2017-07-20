@@ -5,7 +5,7 @@ import {
 	NavLink
 }from "react-router-dom";
 import {Link,browserHistory} from "react-router";
-// import biaodan from "./js.js";
+
 class Login extends Component{
 	constructor(props){
 		super(props);
@@ -24,7 +24,7 @@ class Login extends Component{
 		} else if ( psw==""||mm.test(psw)==false){
 			document.querySelector(".ts2").style.display='block';
 		}else{
-			fetch('/api/user/login', {
+			fetch('/index/index/login4ajax', {
 				headers: {
 				    'Content-Type': 'application/x-www-form-urlencoded'
 				  },
@@ -32,42 +32,18 @@ class Login extends Component{
 			  method: 'POST',
 			  body: "username=" + username + "&psw=" + psw
 			}).then(function(res){
-				return res.text();
+				return res.json();
 			}).then((data)=>{
 				console.log(data);
-				if(data ==="登陆成功"){
+				if(data.code){
 					this.props.history.push('/myaccount');
+				}else{
+					alert("请检查")
 				}
 			})
 		}
 	}
 
-	// login(){
-	// 	fetch('/api/user/login', {
-	// 		headers: {
-	// 		    'Content-Type': 'application/x-www-form-urlencoded'
-	// 		  },
-	// 		credentials: 'include',
-	// 	  method: 'POST',
-	// 	  body: "username=" + this.refs.username.value+"&psw="+ this.refs.psw.value
-	// 	}).then(function(res){
-	// 		return res.text();
-	// 	}).then((data)=>{
-	// 		console.log(data);
-	// 		if(data ==="登陆成功"){
-	// 			this.props.history.push('/myaccount');
-	// 		}
-	// 	})
-	// }
-	// componentDidMount(){
-	// 		axios.get("../../data.json").then(res=>{
-	// 			console.log(res.data.regist);
-	// 			// this.setState({
-	// 			// 	looplist:res.data.regist
-	// 			// })
-	// 		})
-
-	// 	}
 	render(){
 		return(
 			<div id="login">
@@ -94,7 +70,7 @@ class Login extends Component{
 					<span><NavLink to="/regist" activeClassName="suiyi">去注册</NavLink></span>
 				</div>
 				<div className="wenzi">
-					*买房宝用户请用绑定的手机号作为用户名登录，登录密码不变(点击“忘记密码”可进行重置)。
+					*买房宝用户请用绑定的手机号作为用户名登录。
 				</div>
 			
 			</div>
@@ -102,29 +78,18 @@ class Login extends Component{
 	}
 	 chkvalue() {
 	 	var zj=/^1[34578]\d{9}$/;
-	 	var mm=/^[a-zA-Z0-9]{6,}$/;
 	 	var username=document.querySelector(".shouji").value;
-	 	var psw=document.querySelector(".denglu").value;
-	 	// if(username==""){alert("文本框里必须填写内容!");}
+	 	
 	 	if(username==""||zj.test(username)==false){
 	 	   document.querySelector(".ts1").style.display='block';
 	 	}else{
 	 	    document.querySelector(".ts1").style.display='block';
 	 	    document.querySelector(".ts1").innerHTML='true'
 	 	}
-	 	// if(psw==""||mm.test(psw)==false){
-	 	//     document.querySelector(".ts2").style.display='block';
-	 	// }else{
-	 	//     document.querySelector(".ts2").style.display='block';
-	 	//     document.querySelector(".ts2").innerHTML='true'
-	 	// }
 	}
 	 chkvalue1() {
-	 	// var zj=/^1[0-9]{10}$/;
 	 	var mm=/^[a-zA-Z0-9]{6,}$/;
-	 	// var username=document.querySelector(".shouji").value;
 	 	var psw=document.querySelector(".denglu").value;
-	 	// if(username==""){alert("文本框里必须填写内容!");}
 	 	
 	 	if(psw==""||mm.test(psw)==false){
 	 	    document.querySelector(".ts2").style.display='block';
@@ -137,5 +102,3 @@ class Login extends Component{
 }
 
 export default Login; 
-
-

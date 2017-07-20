@@ -11,17 +11,23 @@ class Home extends Component{
 		super(prop);
 		this.state={
 					looplist:[],
-					
+					looplist1:[]
 				}
 
 	}
 	componentDidMount(){
 			
 			draw(99, Math.PI/2);
-			axios.get("/mobile/api/v1/banners").then(res=>{
+			axios.get("/api/home").then(res=>{
 				console.log(res.data);
 				this.setState({
 					looplist:res.data
+				})
+			})
+			axios.get("/api/product").then(res=>{
+				console.log(res.data);
+				this.setState({
+					looplist1:res.data.data[0]
 				})
 			})
 
@@ -49,8 +55,8 @@ class Home extends Component{
 				<NavLink to="/detail" activeClassName="suiyi" className="tiao">
 				<section className="dong">
 					<canvas id="canvas" width="500" height="500"></canvas>
-					<span className="up">预期年化收益率</span>
-					<span className="down">5.90%</span>
+					<span className="up">{}预期年化收益率</span>
+					<span className="down">{this.state.looplist1.annualizedYield}</span>
 				</section></NavLink>
 				<ul>  
 					<li>1000元起投</li>

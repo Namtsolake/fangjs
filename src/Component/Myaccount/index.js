@@ -51,6 +51,28 @@ class Myaccount extends Component{
 			</div>
 			)
 	}
+	componentDidMount() {
+        
+        var str = document.cookie;
+         console.log(str);
+        var arr = str.split('; ');
+        console.log(arr);
+
+        var key_value;
+        for (var i=0; i<arr.length; i++) {
+            key_value = arr[i].split('=');
+            console.log(key_value[1]);
+            //key_value[0]就是cookie的name
+            //key_value[1]就是cookie的value
+            if (key_value[0] === 'username') {
+                var dhh=key_value[1];
+            }
+        }
+
+        console.log(dhh);
+        var tel=document.querySelector('#tel');
+        tel.innerHTML=dhh;
+	}
 }
 
 export default Myaccount; 
