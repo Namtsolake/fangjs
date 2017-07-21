@@ -55,7 +55,7 @@ class Home extends Component{
 				<NavLink to="/detail" activeClassName="suiyi" className="tiao">
 				<section className="dong">
 					<canvas id="canvas" width="500" height="500"></canvas>
-					<span className="up">{}预期年化收益率</span>
+					<span className="up">预期年化收益率</span>
 					<span className="down">{this.state.looplist1.annualizedYield}</span>
 				</section></NavLink>
 				<ul>  
